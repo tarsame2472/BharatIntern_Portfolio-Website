@@ -1,0 +1,305 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:'poppins',sans-serif;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://mcdn.wallpapersafari.com/medium/10/36/4VLfNr.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 1px 0px 5px 1px #ff004f;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin:10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;   
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text{
+    font-size: 30px;
+    margin-top: 100px;
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/* About */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+    height: 780px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* Contact */
+
+#contact{
+    box-shadow: 1px 0px 5px 1px #ff004f;
+}
+
+.contact01{
+    flex-basis: 35%;
+}
+
+.contact01  p{
+    margin-top: 30px;
+}
+
+.contact01 p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact01 button{
+    margin: 20px;
+    background-color: #ff004f;
+    color: white;
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.social-icons{
+    margin-top:30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+nav .fas{
+    display: none;
+}
+
+.contact02{
+    display: grid;
+    width: 700px;
+}
+.contact02 input{
+    margin: 5px;
+    padding: 2px;
+    background-color: #262626;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+.contact02 button{
+    margin: 5px;
+}
+.contact02 #name{
+    height: 60px;
+}
+.contact02 #email{
+    height: 60px;
+}
+.contact02 #message{
+    height: 150px;
+    outline: none;
+    border: none;
+    background-color: #262626;
+    color: #fff;
+    margin: 5px;
+    padding: 2px;
+    border-radius: 8px;
+}
+.contact02 #submit{
+    height: 50px;
+    width: 150px;
+    border: none;
+    background-color: #ff004f;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px)
+{
+    #header{
+        background-image: url(back.webp);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #2d68d5;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 1.0s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .about-col-1{
+        flex-basis: 100%;
+    }
+    .about-col-2{
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+    .contact01{
+         flex-basis: 50px;
+    }
+} 

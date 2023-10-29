@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index01.css">
+    <script src="https://kit.fontawesome.com/e1baf3e08c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <h4 class="logo"></h4>
+                <ul id="side">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <i class="fas fa-sharp fa-solid fa-xmark" onclick="hide()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="show()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi I am <span>Tarsame Singh<br></span> from Graphic Era <br>Deemed To Be University</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="about.jpg" alt="Error">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Web Developer. Skilled in Various Programming Languages (Java,DS) and also proficient in HTML,CSS,JavaScript and DBMS. Good and fluent in (English,Hindi,Punjabi). Pursuing BCA from Graphic Era Deemed To Be University</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Web Development</span><br>HTML,CSS,JavaScript and PHP</li>
+                            <li><span>Languages</span><br>Java,C++,HTML,CSS,JavaScript</li>
+                            <li><span>Software Testing</span><br>Selenium</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2020-2021 (12th Standard)</span><br>RR Morarka Public School<br>Bundki,UttarPradesh,246762<br>Percentage :- 85%</li>
+                            <li><span>2021-present (BCA)</span><br>Graphic Era Deemed To Be University<br>Dehradun,UttraKhand,248002<br>SGPA :- 8.5</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Internship</span><br>Ex Intern at CodeAlpha</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact01">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-sharp fa-solid fa-paper-plane"></i>starsamesingh2472@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7455872649</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <button>Downalod CV</button>
+                </div>
+
+                <div class="contact02">
+                    <input type="text" placeholder="Your Name" id="name">
+                    <input type="email" placeholder="Your Email" id="email">
+                    <!-- <input type="text" placeholder="Enter Your Message" id="message"> -->
+                    <textarea placeholder="Enter Your Message" id="message" cols="30" rows="10"></textarea>
+                    <button id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        var side=document.getElementById("side");
+        function show()
+        {
+            side.style.right = "0";
+        }
+        function hide()
+        {
+            side.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
